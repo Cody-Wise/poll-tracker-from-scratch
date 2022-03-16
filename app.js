@@ -63,7 +63,7 @@ option2ButtonAddEl.addEventListener('click', () => {
     
 });
   
-option1ButtonMinusEl.addEventListener('click', () => {
+option2ButtonMinusEl.addEventListener('click', () => {
 
     option2Votes--;
     displayCurrentPoll();
@@ -91,13 +91,13 @@ function displayAllPolls(){
 
     pastPollDestinationEl.textContent = '';
 
-    for (let polls of pastPollsArray){
 
-        const container = renderPollsEl(question, option1, option2, option1Votes, option2Votes);
 
-        pastPollDestinationEl.append(container);
+    const container = renderPollsEl(question, option1, option2, option1Votes, option2Votes);
 
-    }
+    pastPollDestinationEl.append(container);
+
+   
 }
 
   
