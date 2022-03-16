@@ -39,6 +39,7 @@ submitButtonEl.addEventListener('click', () => {
     option2 = option2InputEl.value;
 
     displayCurrentPoll();
+
     
 });
 
@@ -73,13 +74,28 @@ option2ButtonMinusEl.addEventListener('click', () => {
 
 publishButtonEl.addEventListener('click', () => {
 
-    const poll = renderPollsEl(question, option1, option2, option1Votes, option2Votes);
+    const pastPolls = {
 
-    pastPollsArray.push(poll);
+        question: question,
+        option1: option1,
+        option2: option2,
+        option1Votes: option1Votes,
+        option2Votes: option2Votes,
+    };
+    
+    // renderPollsEl(question, option1, option2, option1Votes, option2Votes);
+
+    pastPollsArray.push(pastPolls);
+
+    displayCurrentPoll();
 
     displayAllPolls();
 
     currentPollDestinationEl.textContent = '';
+    option1Votes = 0;
+    option2Votes = 0;
+
+ 
 
 
 
@@ -91,11 +107,18 @@ function displayAllPolls(){
 
     pastPollDestinationEl.textContent = '';
 
+    for (let pastPoll of pastPollsArray) {
+        // make some stuff
+        // when you create a DOM element, lets call that RENDER
+        const container = renderPollsEl(pastPoll.question, pastPoll.option1, pastPoll.option2, pastPoll.option1Votes, pastPoll.option2Votes);
+  
+        pastPollDestinationEl.append(container);
 
+    }
 
-    const container = renderPollsEl(question, option1, option2, option1Votes, option2Votes);
+    // const container = renderPollsEl(question, option1, option2, option1Votes, option2Votes);
 
-    pastPollDestinationEl.append(container);
+    // pastPollDestinationEl.append(container);
 
    
 }
@@ -115,9 +138,6 @@ function displayCurrentPoll() {
 
     currentPollDestinationEl.append(pollEl);
   
+    
+
 }
-
-
-
-
-
