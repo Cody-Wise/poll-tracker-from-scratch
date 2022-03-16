@@ -23,6 +23,11 @@
             <h2>
                 Poll Tracker!
             </h2>
+            <select name="dropdown" id="dropdown">
+                <option value="1">Select Number of Options</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
             <label>Question
 <input id="questioninput"/>
 </label>
@@ -33,6 +38,10 @@
     Option 2
     <input id="option2input">
 </label>
+<label class="hidden1">
+    Option 3
+    <input id="option3input" class="hidden2">
+</label>
 <button id="submit-button">Submit Poll</button>
         </section>
         <section class="main-section2">
@@ -42,10 +51,12 @@
 
 </div>
 <div class="buttons">
-    Option 1
-<button id="option1plus">+</button> <button id="option1minus">-</button>
-Option 2
-<button id="option2plus">+</button> <button id="option2minus">-</button>
+  <label for="button1">  Option 1
+<button id="option1plus">+</button> <button id="option1minus">-</button></label>
+<label for="button2">Option 2
+<button id="option2plus">+</button> <button id="option2minus">-</button></label>
+<label for="button3" class="hidden3">Option 3 
+<button id="option3plus" class="hidden4">+</button> <button id="option3minus" class="hidden5">-</button></label>
 </div>
 <button id="publish-poll">Publish Poll</button>
         </section>

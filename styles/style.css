@@ -96,3 +96,12 @@ footer {
     flex-direction: column;
     margin:10px;
 }
+
+.hidden1, .hidden2, .hidden3, .hidden4{
+    display: none;
+}
+
+.hidden4{
+    margin-left:5px;
+    padding-left: 6px;
+}

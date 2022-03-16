@@ -5,6 +5,7 @@ import { renderPollsEl } from './render-functions.js';
 const questionInputEl = document.querySelector('#questioninput');
 const option1InputEl = document.querySelector('#option1input');
 const option2InputEl = document.querySelector('#option2input');
+// const option3InputEl = document.querySelector('#option3input');
 const currentPollDestinationEl = document.querySelector('#current-poll-destination');
 const option1ButtonAddEl = document.querySelector('#option1plus');
 const option1ButtonMinusEl = document.querySelector('#option1minus');
@@ -13,6 +14,16 @@ const option2ButtonMinusEl = document.querySelector('#option2minus');
 const pastPollDestinationEl = document.querySelector('#past-poll-destination');
 const submitButtonEl = document.querySelector('#submit-button');
 const publishButtonEl = document.querySelector('#publish-poll');
+const dropDownEl = document.querySelector('#dropdown');
+// const option3ButtonAddEl = document.querySelector('#option3plus');
+// const option3ButtonMinusEl = document.querySelector('#option3minus');
+const hidden1El = document.querySelector('.hidden1');
+const hidden2El = document.querySelector('.hidden2');
+const hidden3El = document.querySelector('.hidden3');
+const hidden4El = document.querySelector('.hidden4');
+const hidden5El = document.querySelector('.hidden5');
+
+
 
 
 
@@ -21,9 +32,28 @@ const publishButtonEl = document.querySelector('#publish-poll');
 let question = '';
 let option1 = '';
 let option2 = '';
+// let option3 = '';
 let option1Votes = 0;
 let option2Votes = 0;
+// let option3Votes = 0;
 const pastPollsArray = [];
+
+dropDownEl.addEventListener('change', () => {
+
+    const value = dropDownEl.value;
+    if (Number(value) === 3) {
+        hidden1El.style.display = 'flex';
+        hidden2El.style.display = 'flex';
+        hidden3El.style.display = 'flex';
+        hidden4El.style.display = 'flex';
+        hidden5El.style.display = 'flex';
+        
+       
+        
+    }
+    
+});
+
 
 
 // set event listeners 
