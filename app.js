@@ -116,9 +116,6 @@ function displayAllPolls(){
 
     }
 
-    // const container = renderPollsEl(question, option1, option2, option1Votes, option2Votes);
-
-    // pastPollDestinationEl.append(container);
 
    
 }
